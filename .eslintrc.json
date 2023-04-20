@@ -1,3 +1,40 @@
 {
-  "extends": "next/core-web-vitals"
+  "root": true,
+  "env": {
+    "node": true,
+    "browser": true,
+    "jest": true,
+    "es6": true
+  },
+  "globals": { "context": "readonly" },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 2016,
+    "ecmaFeatures": {
+      "globalReturn": false,
+      "jsx": true
+    },
+    "project": ["./tsconfig.json"]
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:@typescript-eslint/strict",
+    "plugin:react/recommended",
+    "next/core-web-vitals",
+    "next",
+    "plugin:testing-library/react",
+    "plugin:jest-dom/recommended",
+    "plugin:jest/recommended",
+    "plugin:jest/style",
+    "plugin:prettier/recommended",
+    "prettier"
+  ],
+  "plugins": ["@typescript-eslint","testing-library"],
+  "rules": {
+    "@typescript-eslint/no-unused-vars" : "off",
+    "@typescript-eslint/no-empty-function" : "off"
+  }
 }
