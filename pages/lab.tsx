@@ -1,7 +1,8 @@
 import UserEventLab from "@/src/component/lab/UserEventLab";
+import MswTodoLab from "@/src/component/lab/MswTodoLab";
 
 const LabPage = () => {
-  return <UserEventLab></UserEventLab>;
+  return <MswTodoLab></MswTodoLab>;
 };
 
 export default LabPage;
