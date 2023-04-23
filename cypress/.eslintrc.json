@@ -1,0 +1,22 @@
+{
+  "env": {
+    "node": true,
+    "browser": true,
+    "jest": true,
+    "es6": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 2016,
+    "ecmaFeatures": {
+      "globalReturn": false,
+      "jsx": true
+    },
+    "project": ["./tsconfig.json"]
+  },
+  "plugins": [
+    "cypress"
+  ],
+  "extends": ["plugin:cypress/recommended"]
+}

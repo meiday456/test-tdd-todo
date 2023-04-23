@@ -8,7 +8,7 @@ interface Todo {
   completed: boolean;
 }
 
-const usePlaceHolder = () => {
+const usePlaceholder = () => {
   const [data, setData] = useState<Todo[]>([]);
   const [error, isError] = useState<boolean>(false);
 
@@ -29,4 +29,4 @@ const usePlaceHolder = () => {
   return {data, error};
 };
 
-export default usePlaceHolder;
+export default usePlaceholder;

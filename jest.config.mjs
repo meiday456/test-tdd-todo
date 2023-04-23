@@ -6,6 +6,7 @@ const createJestConfig = nextJest({
 
 const config = {
   testEnvironment: 'jest-environment-jsdom',
+  testPathIgnorePatterns :["<rootDir>/cypress/"],
   preset : 'ts-jest',
   moduleNameMapper:{
     "^@/src/(.*)$": "<rootDir>/src/$1",

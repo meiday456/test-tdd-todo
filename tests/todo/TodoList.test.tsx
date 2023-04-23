@@ -2,7 +2,6 @@ import {render, screen} from "@testing-library/react";
 import TodoList from "@/src/component/todo/TodoList";
 import {TaskInterface} from "@/src/types/TaskTypes";
 import {taskList} from "../../fixtures/todoFeature";
-
 describe("TODO LIST", () => {
   const setting = (list: TaskInterface[]) => {
     const onDelete = jest.fn();

@@ -2,6 +2,7 @@ import {render, screen} from "@testing-library/react";
 import MswTodoLab from "@/src/component/lab/MswTodoLab";
 import {rest} from "msw";
 import {server} from "@/src/mocks/server";
+
 describe("MSW", () => {
   it("todo list call", async () => {
     render(<MswTodoLab />);
@@ -20,5 +21,9 @@ describe("MSW", () => {
     render(<MswTodoLab />);
     const errorEl = await screen.findByText(/Error/);
     expect(errorEl).toBeInTheDocument();
+  });
+  it("엉뚱한 api call 도 mocking을 해주는가?", async () => {
+    render(<MswTodoLab />);
+    expect(await screen.findByText(/userInfos/)).toBeInTheDocument();
   });
 });

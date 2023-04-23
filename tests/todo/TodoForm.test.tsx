@@ -35,7 +35,7 @@ describe("todo 입력 컴포넌트", () => {
       fireEvent.change(input, {target: {value: "할일 2"}});
       fireEvent.submit(form);
       expect(onSubmit).toHaveBeenCalledWith("할일 2");
-      expect(input).toHaveAttribute("value", "");
+      expect(input).toHaveValue("");
     });
     it("input에 값이 없을때 동작", () => {
       const {form, onSubmit} = setting();
