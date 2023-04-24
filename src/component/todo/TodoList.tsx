@@ -10,7 +10,7 @@ interface Props {
 
 const TodoList = ({list, onDelete, onChange}: Props): ReactElement => {
   if (list.length === 0) {
-    return <div>할일이 없습니다.</div>;
+    return <div className={"empty-task"}>할일이 없습니다.</div>;
   }
 
   return (

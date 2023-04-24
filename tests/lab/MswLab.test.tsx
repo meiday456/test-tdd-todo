@@ -26,4 +26,18 @@ describe("MSW", () => {
     render(<MswTodoLab />);
     expect(await screen.findByText(/userInfos/)).toBeInTheDocument();
   });
+
+  it("user api error", async () => {
+    server.use(
+      rest.get(
+        "https://hhhhjsonplaceholder.typicode.com/users",
+        (req, res, context) => {
+          return res(context.status(500));
+        },
+      ),
+    );
+    render(<MswTodoLab />);
+
+    expect(await screen.findByText(/userInfos/)).not.toBeInTheDocument();
+  });
 });

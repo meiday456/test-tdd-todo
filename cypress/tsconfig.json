@@ -3,12 +3,12 @@
     "target": "es5",
     "lib": ["es5", "dom"],
     "noEmit": true,
-    "types": ["cypress","node"]
+    "types": ["cypress","node", "cypress-react-selector"]
   },
   "include": [
     "../node_modules/cypress",
     "./**/*.ts",
     "./**/*.tsx",
-    "../cypress.config.ts"
+    "../cypress.config.ts",
   ]
 }

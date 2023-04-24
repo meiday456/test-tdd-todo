@@ -16,7 +16,7 @@ const TodoItem = ({item, onDelete, onChange}: Props): ReactElement => {
   };
 
   return (
-    <div>
+    <div className={"task-item"}>
       <input type="text" value={task} onChange={e => onChangeHandler(e)} />
       <button onClick={() => onDelete(item.id)}>삭제</button>
     </div>
