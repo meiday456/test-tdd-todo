@@ -14,7 +14,9 @@
       "globalReturn": false,
       "jsx": true
     },
-    "project": ["./tsconfig.json"]
+    "project": [
+      "./tsconfig.json"
+    ]
   },
   "plugins": [
     "cypress"
@@ -22,5 +24,9 @@
   "rules": {
     "@typescript-eslint/no-namespace": "off"
   },
-  "extends": ["plugin:cypress/recommended"]
+  "extends": [
+    "plugin:cypress/recommended",
+    "plugin:prettier/recommended",
+    "prettier"
+  ]
 }

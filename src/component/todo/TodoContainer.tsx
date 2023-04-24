@@ -42,7 +42,7 @@ const TodoContainer = ({taskList}: Props): ReactElement => {
 
   return (
     <div>
-      <h2>할일 목록</h2>
+      <h2 className={"todo-title"}>할일 목록</h2>
       <TodoForm onSubmit={submitHandler}></TodoForm>
       <TodoList
         list={list}
